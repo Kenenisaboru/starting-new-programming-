@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>PHP Form</title>
 </head>
 <body>
-    <?php 
-    
- $charactName = "kanu";
- $charactAge = 22;
- echo "There once was a man named $charactName<br>";
-echo "He was $charactAge years old<br>";
-echo "He realyy liked the name $charactName<br>";
-echo "But didint like being 35<br>";
-//data type
-//string 
-//scalar types
-$FullName = "kenenisa Boru";
-echo $FullName;
-$string ="Dani";
-$init = 1234;
-$float =2.589;
-$bool="T/f";
-$FullName;
-// Array types
-$arry= [];
-$object=null;
-echo $_SERVER["DOCUMENT_ROOT"];
-echo"<br>";
-echo $_SERVER["PHP_SELF"];
-echo"<br>";
-echo $_SERVER["SERVER_NAME"];
-echo"<br>";
-echo $_SERVER["REQUEST_METHOD"];
-echo $_GET["Name"];
-echo $_REQUEST["name"];
-echo $_FILES["name"];
-$_SESSION["username"] = "krossing";
-echo $_SESSION["username"];
 
+<main>
+    <h2>User Information Form</h2>
 
+    <!-- Use POST (more secure than GET) -->
+    <form action="form.php" method="post">
 
+        <label for="firstname">First Name</label><br>
+        <input id="firstname" type="text" name="firstname" placeholder="First name..." required><br><br>
 
-?>
-    
+        <label for="lastname">Last Name</label><br>
+        <input id="lastname" type="text" name="lastname" placeholder="Last name..." required><br><br>
+
+        <label for="favouritepet">Favourite Pet</label><br>
+        <select id="favouritepet" name="favouritepet" required>
+            <option value="">-- Select one --</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
 </body>
 </html>
