@@ -1,9 +1,7 @@
 <?php
-
-// Only run when form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // Collect & clean data
+  
     $firstname = htmlspecialchars(trim($_POST["firstname"]));
     $lastname = htmlspecialchars(trim($_POST["lastname"]));
     $favouritepet = htmlspecialchars(trim($_POST["favouritepet"]));
