@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Love, [Her Name]</title>
+    <style>
+        body { background: pink; text-align: center; padding: 50px; }
+        .heart { cursor: pointer; transition: transform 0.3s; }
+        .heart:hover { transform: scale(1.2); }
+        .secret-message { display: none; }
+    </style>
+</head>
+<body>
+    <h1>For [Her Name], My Forever Love</h1>
+    <div class="heart" onclick="showMessage()">❤️ Click Me! ❤️</div>
+    <p id="secretMessage" class="secret-message">[Your Special Message Here]</p>
+    
+    <script>
+        function showMessage() {
+            document.getElementById('secretMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
